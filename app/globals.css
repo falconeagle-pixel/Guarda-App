@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --wallet-body: 240 1% 13%; /* #222223 */
+    --background: var(--wallet-body);
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    /* Guarda Light Theme Colors */
+    --guarda-background: var(--wallet-body);
+    /* White */
+    --guarda-card: 0 0% 96.1%;
+    /* Light Gray */
+    --guarda-border: 214.3 31.8% 91.4%;
+    --guarda-input: 0 0% 96.1%;
+    --guarda-input-border: 214.3 31.8% 91.4%;
+    --guarda-text-muted: 215.4 16.3% 46.9%;
+    --guarda-text-primary: 222.2 47.4% 11.2%;
+    --guarda-blue: 217.2 91.2% 59.8%;
+    /* Blue-600 */
+    --guarda-blue-hover: 217.2 91.2% 50%;
+    /* Blue-700 */
+    --guarda-blue-light: 217.2 91.2% 80%;
+    /* Blue-300 */
+    --guarda-blue-dark: 217.2 91.2% 30%;
+    /* Blue-900 */
+    --guarda-yellow-warning: 45 100% 70%;
+    /* Yellow-400 */
+    --guarda-green-success: 142.1 76.2% 36.3%;
+    /* Green-500 */
+  }
+
+  .dark {
+    --wallet-body: 240 1% 13%; /* #222223 */
+    --background: var(--wallet-body);
+    --guarda-background: var(--wallet-body);
+    --foreground: 210 40% 98%;
+    /* White */
+
+    --card: 217.2 32.6% 17.5%;
+    /* Darker Gray */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 47.4% 11.2%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    /* Guarda Dark Theme Colors */
+    --guarda-background: var(--wallet-body);
+    /* #1a1a1a */
+    --guarda-card: 220 14% 15%;
+    /* #2a2a2a */
+    --guarda-border: 215 14% 34%;
+    /* gray-700 */
+    --guarda-input: 215 14% 34%;
+    /* gray-700 */
+    --guarda-input-border: 215 14% 28%;
+    /* gray-600 */
+    --guarda-text-muted: 215 14% 65%;
+    /* gray-400 */
+    --guarda-text-primary: 210 40% 98%;
+    /* white */
+    --guarda-blue: 217.2 91.2% 59.8%;
+    /* blue-600 */
+    --guarda-blue-hover: 217.2 91.2% 50%;
+    /* blue-700 */
+    --guarda-blue-light: 217.2 91.2% 80%;
+    /* blue-300 */
+    --guarda-blue-dark: 217.2 91.2% 30%;
+    /* blue-900 */
+    --guarda-yellow-warning: 45 100% 70%;
+    /* yellow-400 */
+    --guarda-green-success: 142.1 76.2% 36.3%;
+    /* green-500 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
