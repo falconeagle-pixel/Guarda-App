@@ -1,5 +1,8 @@
 
 import { useState } from "react";
+import { ThemeProvider } from "next-themes";
+import { ThemeToggle } from "../../components/ThemeToggle";
+import { useEffect, useState as useReactState } from "react";
 import { Home, HelpCircle, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WelcomeScreen } from "@/components/WelcomeScreen";
@@ -30,7 +33,8 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-background text-white">
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+      <div className="min-h-screen flex flex-col bg-background text-white">
       {/* Header */}
       <header className="w-full" style={{ backgroundColor: '#303132' }}>
         <div className="max-w-6xl mx-auto w-full flex items-center justify-between px-8 py-4">
@@ -63,7 +67,7 @@ const Index = () => {
           </div>
           <div className="flex items-center space-x-4">
             <HelpCircle className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
-            <Sun className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
+            <ThemeToggle iconClass="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
             <div className="flex items-center space-x-2 text-gray-400 hover:text-white cursor-pointer">
               <Home className="w-4 h-4" />
               <span className="text-sm">Back to Guarda.com</span>
@@ -120,6 +124,7 @@ const Index = () => {
         </Button>
       </div>
     </div>
+    </ThemeProvider>
   );
 };
 

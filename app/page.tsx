@@ -37,6 +37,7 @@ import EarnSection from "../components/earn/EarnSection";
 import LoanSection from "../components/loan/LoanSection";
 import SettingsSection from "../components/settings/SettingsSection";
 import { useTheme } from "next-themes";
+import { ThemeToggle } from "../components/ThemeToggle";
 
 // Cryptocurrency data
 type Coin = {
@@ -616,18 +617,7 @@ export default function GuardaPlatform() {
             >
               <HelpCircle className="w-5 h-5" />
             </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-guarda-text-muted hover:text-guarda-text-primary"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            >
-              {theme === "dark" ? (
-                <Sun className="w-5 h-5" />
-              ) : (
-                <Moon className="w-5 h-5" />
-              )}
-            </Button>
+            <ThemeToggle className="text-guarda-text-muted hover:text-guarda-text-primary" iconClass="w-5 h-5" />
             <Button
               variant="ghost"
               size="icon"
